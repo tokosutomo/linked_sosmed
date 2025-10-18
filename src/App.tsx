@@ -1,5 +1,8 @@
 import "./App.css";
 import WhatsappIcon from "./assets/whatsappIcon.png";
+import shoopeIcon from "./assets/shoopeIcon.jpeg";
+import tokopediaIcon from "./assets/tokopediaIcon.jpeg";
+import youtubeIcons from "./assets/youtubeIcon.jpeg";
 import TokoIcon from "./assets/logoToko.jpeg";
 import { FaTiktok } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
@@ -24,9 +27,9 @@ function App() {
       href: "https://wa.me/6283808484969",
       logo: WhatsappIcon,
     },
-    { dislay: "SHOPEE", href: "", logo: "" },
-    { dislay: "TOKOPEDIA", href: "", logo: "" },
-    { dislay: "YOUTUBE", href: "", logo: "" },
+    { dislay: "SHOPEE", href: "", logo: shoopeIcon },
+    { dislay: "TOKOPEDIA", href: "", logo: tokopediaIcon },
+    { dislay: "YOUTUBE", href: "", logo: youtubeIcons  },
   ];
 
   const ALLSOSMED = [
@@ -44,15 +47,15 @@ function App() {
         <img src={TokoIcon} className="rounded-full w-40 h-40 border-2" />
       </div>
 
-      <div className=" px-5 flex flex-col gap-1 ">
+      <div className="px-5 flex flex-col gap-1 ">
         {AllLINK.map((value, i) => (
           <div
             key={i}
-            className="bg-gray-50 border-2 flex items-center gap-5 py-3 border-amber-500  flex-1"
+            className="bg-white border-2 flex items-center gap-5 py-1 px-2 border-amber-500  flex-1"
           >
             <img
               src={value.logo}
-              className="rounded-full h-20 w-20 object-contain"
+              className=" h-16 w-16 object-contain"
               alt=""
             />
 
@@ -63,7 +66,7 @@ function App() {
 
       <div className="px-5 flex justify-center items-center gap-7 mt-10">
         {ALLSOSMED.map((value, i) => (
-          <div className="text-white text-5xl cursor-pointer" key={i}>
+          <div className="text-white text-3xl cursor-pointer" key={i}>
             <a href={value.href}>{<value.logo />}</a>
           </div>
         ))}
