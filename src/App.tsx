@@ -41,7 +41,7 @@ function App() {
   return (
     <section className="bg-gray-900 min-h-screen py-10">
       <div className="flex justify-center mb-14 ">
-        <img src={TokoIcon} className="rounded-full w-20 h-20 border-2" />
+        <img src={TokoIcon} className="rounded-full w-40 h-40 border-2" />
       </div>
 
       <div className=" px-5 flex flex-col gap-1 ">
