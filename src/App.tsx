@@ -9,11 +9,19 @@ function App() {
   const AllLINK = [
     { dislay: "STOCK HP SECCOND", href: "", logo: WhatsappIcon },
     { dislay: "STOCK HP BARU", href: "", logo: WhatsappIcon },
-    { dislay: "WEB TOCOPHONE", href: "", logo: TokoIcon },
-    { dislay: "ADMIN [INFO LEBIH LANJUT]", href: "", logo: WhatsappIcon },
+    {
+      dislay: "WEB TOCOPHONE",
+      href: "https://www.tocophone.id/",
+      logo: TokoIcon,
+    },
+    {
+      dislay: "ADMIN [INFO LEBIH LANJUT]",
+      href: "https://wa.me/6285143029006",
+      logo: WhatsappIcon,
+    },
     {
       dislay: "ADMIN [ORDER ONLINE FREE ONGKIR SEKALBAR]",
-      href: "",
+      href: "https://wa.me/6283808484969",
       logo: WhatsappIcon,
     },
     { dislay: "SHOPEE", href: "", logo: "" },
@@ -22,7 +30,10 @@ function App() {
   ];
 
   const ALLSOSMED = [
-    { href: "", logo: FaTiktok },
+    {
+      href: "https://www.tiktok.com/@tocophone?_t=ZS-90eqhPWmhoW&_r=1",
+      logo: FaTiktok,
+    },
     { href: "", logo: FaFacebook },
     { href: "", logo: FaInstagram },
   ];
@@ -39,9 +50,12 @@ function App() {
             key={i}
             className="bg-gray-50 border-2 flex items-center gap-5 py-3 border-amber-500  flex-1"
           >
-            <div>
-              {<img src={value.logo} className="rounded-full h-20" alt="" />}
-            </div>
+            <img
+              src={value.logo}
+              className="rounded-full h-20 w-20 object-contain"
+              alt=""
+            />
+
             <p className="">{value.dislay}</p>
           </div>
         ))}
@@ -50,7 +64,7 @@ function App() {
       <div className="px-5 flex justify-center items-center gap-7 mt-10">
         {ALLSOSMED.map((value, i) => (
           <div className="text-white text-5xl cursor-pointer" key={i}>
-            {<value.logo />}
+            <a href={value.href}>{<value.logo />}</a>
           </div>
         ))}
       </div>
